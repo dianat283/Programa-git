@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
+// componente de inicio de sesion
 const LoginForm = () => {
   const [credentials, setCredentials] = useState({ nombre: "", contraseña: "" });
   const navigate = useNavigate();
+  // <button onClick={() => {navigate(-1);}}/>
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -25,6 +26,7 @@ const LoginForm = () => {
     console.log(data);
 
     if (data.autenticado) {
+      console.log("Validado Correctamente")
       navigate("/noticias");
     }
   };
@@ -39,10 +41,11 @@ const LoginForm = () => {
   // );
 
   return (
+    
     <div>
       <h2>Inicio de Sesión</h2>
       <form>
-        <input type="email" placeholder="Correo electrónico" required />
+        <input type="text" placeholder="Nombre" required />
         <input type="password" placeholder="Contraseña" required />
         <button type="submit">Ingresar</button>
       </form>

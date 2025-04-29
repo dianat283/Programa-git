@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+//  nuevo componente para el formulario de registro
 const RegisterForm = () => {
   // return (
   //   <div>
@@ -28,6 +29,7 @@ const RegisterForm = () => {
       console.log("Usuario registrado:", user);
     };
   
+    // retorna el registreo de usuario
   return (
     <form onSubmit={handleSubmit}>
       <h2>Registro de Usuario</h2>
